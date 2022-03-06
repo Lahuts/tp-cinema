@@ -6,9 +6,15 @@ body{
     color: #fff;
 }
 
-header>h1{
-    
+header{
     text-align: center;
+    overflow: hidden;
+}
+header>img{
+    width: 10rem;
+    height: 10rem;
+}
+header>h1{
     margin-bottom: 2rem;
     font-size: xx-large;
     font-weight: 700;
@@ -41,7 +47,6 @@ ol{
 
 }
 li{
-    border: solid black thin;
     width: 10rem;
     height: 14.5rem;
 }
