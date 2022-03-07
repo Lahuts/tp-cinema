@@ -1,5 +1,5 @@
 # TP Cinema
-but : Créer une maquette de site web sur le théme des sites de streaming
+but : Créer une maquette de site web sur le thème des sites de streaming  
 Rendez-vous sur [TP-cinema](https://lahuts.github.io/tpcinema/index.html) pour voir l'aperçu!
 ## Index
 ```html
@@ -17,7 +17,7 @@ Rendez-vous sur [TP-cinema](https://lahuts.github.io/tpcinema/index.html) pour v
 </head>
 <body>
     <header>
-        <img src="asset/logo.svg" alt="logo du site">
+        <a href="index.html"><img src="asset/logo.svg" alt="logo du site"></a>
         <h1>Films , séries TV et bien plus en illimité !</h1>
     </header>
     <main>
@@ -51,6 +51,7 @@ Rendez-vous sur [TP-cinema](https://lahuts.github.io/tpcinema/index.html) pour v
     <footer><p>@ - Streaming - 2022</p></footer>
 </body>
 </html>
+
 ```
 ## Css Main
 ```css
@@ -60,13 +61,14 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: rgb(54, 53, 53);
     color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
 }
 
 header{
     text-align: center;
     overflow: hidden;
 }
-header>img{
+header>a>img{
     width: 10rem;
     height: 10rem;
 }
@@ -113,16 +115,21 @@ a{
     align-items: center;
     padding: 1rem;
     
+    
 }
 a>p{
     text-align: center;
     color: #fff;
     font-size:large;
     font-weight: 500;
-    background-color: rgb(81, 130, 227);
+    background-color: rgba(255, 26, 18,1);
     padding: 0.5em;
     padding-left: 5em;
     padding-right: 5em;
+    transition: background-color 0.5s;
+}
+a>p:hover{
+     background-color: rgba(255, 26, 18, 0.5); ;
 }
 section:nth-child(2){
     overflow: hidden;
@@ -200,6 +207,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: rgb(54, 53, 53);
     color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
 }
 header{
     overflow: hidden;
@@ -211,7 +219,7 @@ header>h1{
     color: #fff;
 }
 
-header>img{
+header>a>img{
 
     width: 10rem;
     height: 10rem;
@@ -266,13 +274,20 @@ h2{
     font-weight: 500;
 }
 input,select{
-    background-color: #fff;
+    background-color: rgba(77, 75, 75, 0.748);
     width: 35rem;
-    height: 3rem;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    height: 4rem;
+    border-radius: 0.7rem 0.7rem 0.7rem 0.7rem;
+    color:#fff;
+    padding: 1em;
 }
 input:last-child{
     margin-top: 3rem;
+    background-color: rgba(255, 26, 18,1);
+    transition: background-color 0.5s;
+}
+input:last-child:hover{
+    background-color: rgba(255, 26, 18, 0.5); ;
 }
 
 footer{
