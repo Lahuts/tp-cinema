@@ -27,6 +27,11 @@ main{
     margin-left: 16rem;
     margin-right: 16rem;
 }
+
+p{
+    margin-bottom: 1em;
+}
+
 section>h2{
     font-weight: 500 ;
     text-align: center;
@@ -38,18 +43,24 @@ section>p{
     text-align: center;
     font-size: 1.6rem;
 }
-ol{
+section>ul{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    margin-top: 2em;
-    float: left;
-    
-
-
+    grid-template-rows: repeat(3,1fr);
+    gap: 1em;
 }
-li{
-    width: 10rem;
-    height: 14.5rem;
+h3{display: none;}
+figcaption>h3{
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+li>figure>img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 a{
     margin-top: 2em;
@@ -59,6 +70,9 @@ a{
     padding: 1rem;
     
     
+}
+figure>ul>li{
+display: none;
 }
 a>p{
     text-align: center;
@@ -74,17 +88,7 @@ a>p{
 a>p:hover{
      background-color: rgba(255, 26, 18, 0.5); ;
 }
-section:nth-child(2){
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-li{
-    margin: 1em;
-}
-li>img{
-    width: 100%;
-}
+
 footer{
     margin-top: 2rem;
 }
