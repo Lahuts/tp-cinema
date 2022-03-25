@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", e => {
     }, {
 
         title: "Joker",
-        date_de_sortie: "9 Octobre 2019",
+        date: "9 Octobre 2019",
         type: "thriller",
         duree: "2h2",
         acteurs: "Joaquin Phoenix",
@@ -111,49 +111,45 @@ document.addEventListener("DOMContentLoaded", e => {
         image: "https://www.themoviedb.org/t/p/w1280/wUFIEJCSmurmXPX0mP0cEgoltrk.jpg"
     }];
 
-    class Movie {
-        constructor(mov) {
-            this.image = mov.image; // figure > img
-            this.title = mov.title; // figcaption
-            this.date = mov.date; // li
-            this.director = mov.director; // li
-            this.type = mov.type; // li
-            this.printObj();
+    const container = document.getElementById("container");
+    let g = document.getElementById('g');
+    let d = document.getElementById("d");
+    let p = 0;
+    let nb = 3;
+    container.style.width = 800 * nb + "px";
+    for (i = 1; i < 4; i++) {
+        a = document.createElement("div");
+        a.className = "grid-5";
+        for (j = 1; j < 6; j++) {
+            b = document.createElement("img");
+            b.src = `${movies[j].image}`;
+            b.className = "pic";
+            a.appendChild(b);
         }
-        printObj(movies) {
-            ul.innerHTML += `
-        <li>
-           <figure>
-           <img id="test" src="${this.image}"></img>
-             <figcaption>
-                <h3>${this.title}</h3>
-             </figcaption>
-             <ul>
-                   <li>${this.director}</li>
-                    <li>${this.date}</li>
-                    <li>${this.type}</li>
-                 </ul>
-            </figure>
-        </li>
-       `;
-        }
+
+        container.appendChild(a);
     }
 
-    let el = document.querySelector("#grid");
-    let ul = document.createElement("ul");
-    el.appendChild(ul);
-
-    for (let i = 0; i < movies.length; i++) {
-        let film = new Movie(movies[i]);
-    }
-    document.querySelectorAll('#test').forEach(item => {
-        item.addEventListener('mouseenter', event => {
-            //handle click
-        });
+    g.addEventListener("click", () => {
+        if (p < 0) {
+            p++;
+            container.style.transform = "translate(" + p * 800 + "px)";
+            console.log(p);
+        } else {
+            p = -2;
+            container.style.transform = "translate(" + p * 800 + "px)";
+            console.log(p);
+        }
     });
-    document.querySelectorAll('#test').forEach(item => {
-        item.addEventListener('mouseout', event => {
-            //handle click
-        });
+    d.addEventListener("click", () => {
+        if (p > -2) {
+            p--;
+            container.style.transform = "translate(" + p * 800 + "px)";
+            console.log(p);
+        } else {
+            p = 0;
+            container.style.transform = "translate(" + p * 800 + "px)";
+            console.log(p);
+        }
     });
 });

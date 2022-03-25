@@ -1,0 +1,51 @@
+
+#carousel{
+    width: 80em;
+    position: relative;
+    overflow: hidden;
+    
+}
+#container{
+    
+    width: 90em;
+    transition: ease-in-out 0.5s;
+    
+}
+.grid-5{
+    display: inline-block;
+    width: 80em;
+}
+.pic{
+    width: calc(70em/5);
+    border-radius: 10px 10px 15px 15px;
+
+}
+.grid-5>.pic:first-child{
+    margin-left: 1.7em;
+}
+.grid-5>.pic:nth-child(2),.grid-5>.pic:nth-child(4){
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.grid-5>.pic:hover{
+    opacity: 50%;
+    transition:ease-in-out 0.5s;
+}
+.btn{
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    
+}
+#g{
+    top: 6px;
+    left: 0px;
+    transform:rotate(180deg);
+    
+}
+#d{
+    top: 6px;
+    right: 0px;
+}
