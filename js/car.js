@@ -116,40 +116,40 @@ document.addEventListener("DOMContentLoaded", e => {
     let d = document.getElementById("d");
     let p = 0;
     let nb = 3;
-    container.style.width = 800 * nb + "px";
+    let page = 0;
+    let max = 5;
+    container.style.width = 80 * nb + "em";
     for (i = 1; i < 4; i++) {
-        a = document.createElement("div");
+        a = document.createElement("ul");
         a.className = "grid-5";
-        for (j = 1; j < 6; j++) {
-            b = document.createElement("img");
-            b.src = `${movies[j].image}`;
-            b.className = "pic";
-            a.appendChild(b);
-        }
-
         container.appendChild(a);
+        for (j = page; j < max; j++) {
+            c = document.createElement("li");
+            c.className = "grid-item";
+            b = document.createElement("img");
+            b.className = "pic";
+            b.src = movies[j].image;
+            c.appendChild(b);
+            a.appendChild(c);
+        }
+        page += 5;
+        max += 5;
     }
 
     g.addEventListener("click", () => {
         if (p < 0) {
             p++;
-            container.style.transform = "translate(" + p * 800 + "px)";
-            console.log(p);
         } else {
             p = -2;
-            container.style.transform = "translate(" + p * 800 + "px)";
-            console.log(p);
         }
+        container.style.transform = "translate(" + p * 80 + "em)";
     });
     d.addEventListener("click", () => {
         if (p > -2) {
             p--;
-            container.style.transform = "translate(" + p * 800 + "px)";
-            console.log(p);
         } else {
             p = 0;
-            container.style.transform = "translate(" + p * 800 + "px)";
-            console.log(p);
         }
+        container.style.transform = "translate(" + p * 80 + "em)";
     });
 });

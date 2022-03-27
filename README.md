@@ -6,4 +6,3 @@ Rendez-vous sur [TP-cinema](https://lahuts.github.io/tp-cinema/index.html) pour 
 Font : 'Roboto' sans serif 
        'Gotham Medium' sans serif (logo)
 
-
